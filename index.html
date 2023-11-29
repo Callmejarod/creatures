@@ -186,24 +186,26 @@
                 clear background color to white
                 
             */
-            //alert("clearAll()");
 
-            const myNodeList = document.querySelectorAll("div.creature")
-            console.log(myNodeList);
+             const myNodeList = document.querySelectorAll("div.creature")
+             console.log(myNodeList);
 
+            myNodeList.forEach(function(el){
+                el.style.backgroundColor = "#fff";
+                el.style.border = "2px solid #000";
+            });
 
+            // for(let x = 0; x<myNodeList.length; x++){
 
-            for(let x = 0; x<myNodeList.length; x++){
+            //     myClear = myNodeList[x].dataset.clearAll;
 
-                myClear = myNodeList[x].dataset.clearAll;
-
-                switch(myClear){
-                    case "clear":
-                    myNodeList[x].style.backgroundColor = "white";
-                    myNodeList[x].style.border ="2px solid black";
-                    break;
-                }
-            }
+            //     switch(myClear){
+            //         case "clear":
+            //         myNodeList[x].style.backgroundColor = "white";
+            //         myNodeList[x].style.border ="2px solid black";
+            //         break;
+            //     }
+           // }
 
 
 
