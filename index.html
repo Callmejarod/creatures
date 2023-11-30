@@ -31,13 +31,13 @@
     <h1>Creatures</h1>
     <h3>A JavaScript data attributes example by Jarod Atienzo</h3>
     <p>This page demonstrates how to use JavaScript data attributes to differentiate data.</p>
-    <p>When you click <b>Show Creature Home</b>, the background color will change color based on their natural environment:
+    <p>When you click <b>Show Creature Home</b>, the background will change based on their natural environment:
     </p> 
     <div>
         <ul>
-            <li>land: green</li>
-            <li>water: blue</li>
-            <li>air: yellow</li>
+            <li>land: grass</li>
+            <li>water: ocean</li>
+            <li>air: sky</li>
         </ul>
     </div>
 
@@ -119,15 +119,18 @@
 
                     switch(myHome){
                         case "land":
-                            myNodeList[x].style.backgroundColor = "green"; 
+                            myNodeList[x].style.backgroundImage = "url(images/backgroundLand.jpg)";
+                            myNodeList[x].style.backgroundSize = "355px";
                         break;
 
                         case "water":
-                            myNodeList[x].style.backgroundColor = "blue"; 
+                            // myNodeList[x].style.backgroundImage = "url(images/backgroundWater.png)";
+                            myNodeList[x].style.backgroundImage = "url(images/backgroundWater.png)";
                         break;
                     
                         case "air":
-                            myNodeList[x].style.backgroundColor = "yellow"; 
+                            myNodeList[x].style.backgroundImage = "url(images/backgroundAir.png)"; 
+                            myNodeList[x].style.backgroundSize = "260px";
                         break;
                     
 
@@ -191,7 +194,7 @@
              console.log(myNodeList);
 
             myNodeList.forEach(function(el){
-                el.style.backgroundColor = "#fff";
+                el.style.backgroundImage = "";
                 el.style.border = "2px solid #000";
             });
 
